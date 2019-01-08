@@ -1,4 +1,6 @@
 var express = require('express');
+var mysql = require('mysql');
+var connect = mysql.createConnection(require('./config/database.js'));
 let app = express();
 
 const http = require('http');
@@ -11,10 +13,12 @@ app.post('/', (req, res) => {
     res.send('root - post');
 });
 
-app.get('/users:id', (req, res) => {
-    let param = req.params;
-    let query = req.query;
-    res.send("users get req", param, query);
+app.get('/users', (req, res) => {
+    connect.query('SELECT aibees from user', (err, rows) => {
+        if(err) throw err;
+
+        res.send(rows);
+    });
 });
 
 app.post('/user', (req, res) => {
@@ -23,5 +27,5 @@ app.post('/user', (req, res) => {
 });
 
 http.createServer(app).listen(3000, () => {
-    console.log("server open");
+    console.log("server on");
 });
