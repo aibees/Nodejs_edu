@@ -1,0 +1,27 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "description": "webServer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aibees/codes_by_aibees.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aibees/codes_by_aibees/issues"
+  },
+  "homepage": "https://github.com/aibees/codes_by_aibees#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
