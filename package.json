@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aibees/codes_by_aibees.git"
+    "url": "git+https://github.com/aibees/node.js.git"
   },
   "keywords": [
     "nodejs"
@@ -17,9 +17,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aibees/codes_by_aibees/issues"
+    "url": "https://github.com/aibees/node.js/issues"
   },
-  "homepage": "https://github.com/aibees/codes_by_aibees#readme",
+  "homepage": "https://github.com/aibees/node.js#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
