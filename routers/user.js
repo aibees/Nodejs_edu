@@ -5,6 +5,12 @@ var userapi = require('../apis/userapi');
 
 router.get('/', userapi.userget);
 
-router.post('/', userapi.userpost);
+router.get('/:id', userapi.usergetbyid);
+
+router.post('/', userapi.userinsert);
+
+router.put('/:id', userapi.userupdate);
+
+router.delete('/:id', userapi.userdelete);
 
 module.exports = router;
