@@ -1,0 +1,23 @@
+{
+    "development": {
+      "username": "admin",
+      "password": "",
+      "database": "",
+      "host": "..us-east-2.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "admin",
+      "password": "",
+      "database": "",
+      "host": "..us-east-2.rds.amazonaws.com",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "admin",
+      "password": "",
+      "database": "",
+      "host": "..us-east-2.rds.amazonaws.com",
+      "dialect": "mysql"
+    }
+  }
