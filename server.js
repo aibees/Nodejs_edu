@@ -1,10 +1,7 @@
 const express = require('express');
 let body = require('body-parser');
 let app = express();
-/* 
-const sequelize = require('./models/index').sequelize;
-sequelize.sync();
- */
+
 app.use(body.urlencoded({extended:true}));
 app.use(body.json());
 
