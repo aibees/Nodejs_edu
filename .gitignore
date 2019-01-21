@@ -2,4 +2,6 @@ config/
 
 node_modules/
 
+sessions/
+
 .env
