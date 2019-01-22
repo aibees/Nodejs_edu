@@ -5,10 +5,11 @@ const fileStore = require('session-file-store')(session);
 let body = require('body-parser');
 let app = express();
 
-//session
+//views
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+//session
 app.use(session({
     secret : 'keyboard cat', //session 암호화
     resave : true, //session을 항상 저장할 지 여부를 정하는 값
