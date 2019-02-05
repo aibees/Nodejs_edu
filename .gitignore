@@ -2,3 +2,4 @@ config/
 sessions/
 node_modules/
 .env
+config.json

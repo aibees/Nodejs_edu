@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const fileStore = require('session-file-store')(session);
 const helmet = require('helmet');
+const path = require('path');
 
 //variable create
 let body = require('body-parser');
@@ -30,10 +31,23 @@ app.disable('x-powered-by');
 app.use(body.urlencoded({extended:true}));
 app.use(body.json());
 
+//socket
+const io = require('socket.io')(require('http').Server(app));
+
+app.get('/', (req, res) => {
+    console.log("send chat.html");
+    res.sendFile(path.join(__dirname, './static', 'chat.html'));
+});
+
+io.on('connection', function(socket) {
+    console.log('a user connected');
+})
+
 //router
 app.use('/user', require('./routers/user'));
 app.use('/auth', require('./routers/auth'));
 app.use('/session', require('./routers/session'));
+app.use('/chat', require('./routers/chat'));
 
 //listen
 app.listen(3000, 'localhost', () => {
